@@ -49,7 +49,7 @@ describe('ReservationsService', () => {
     const savedReservation = { ...reservation, status: 'cancelled' } as ReservationEntity;
 
     // TODO TEST 2: Arrange dependencies, call cancel(7), and check the required behavior.
-    throw new Error('TODO TEST 2: complete the successful cancellation test');
+    service = ConflictException.get(savedReservation)
   });
 
   it('does not change or save a reservation when the rule rejects cancellation', async () => {
@@ -63,6 +63,6 @@ describe('ReservationsService', () => {
 
     // TODO TEST 3: Make the mock rule reject this ACTIVE reservation, as requested.
     // Check the exception, the unchanged state, and the absence of a save() call.
-    throw new Error('TODO TEST 3: complete the rejected cancellation test');
+    service = ConflictException.get(reservation)
   });
 });

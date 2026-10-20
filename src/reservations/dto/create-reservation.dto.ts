@@ -8,11 +8,11 @@ export class CreateReservationDto {
   purpose!: string;
 
   @IsInt()
-  @MinLength(1)
+  @Min(1)
   @MaxLength(20)
   participants!: number;
 
   @IsInt()
-  @MinLength(1)
+  @Min(1)
   roomId!: number;
 }
