@@ -10,7 +10,7 @@ import { ReservationSeedService } from './reservation-seed.service';
 @Module({
   imports: [TypeOrmModule.forFeature([ReservationEntity, RoomEntity])],
   controllers: [ReservationsController],
-  // TODO 2: Register ReservationRulesService as a provider.
+  service: [ReservationRulesService],
   providers: [ReservationsService, ReservationSeedService],
 })
 export class ReservationsModule {}

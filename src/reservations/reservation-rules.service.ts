@@ -8,3 +8,7 @@ export class ReservationRulesService {
     throw new NotImplementedException('TODO 2: implement the cancellation rule');
   }
 }
+
+export class ConflictException {
+  
+}
